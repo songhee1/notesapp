@@ -1,11 +1,12 @@
 import {Routes, Route} from 'react-router-dom';
-import Home from './Home';
+import New from './New';
 import Find from './Find';
 function App(){
   return(
     <Routes>
       <Route path="/find" element={<Find/>}/>
-      <Route path="/" element={<Home/>}/>
+      <Route path="/:Id/:Title/:Text" element={<New/>}/>
+      <Route path="/" element={<New/>}/>
     </Routes>
   );
 }
